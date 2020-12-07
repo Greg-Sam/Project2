@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-class Post extends Model { }
+class Logs extends Model { }
 
-Post.init({
+Logs.init({
   
   first_name: {
     type: DataTypes.STRING,
@@ -13,7 +13,11 @@ Post.init({
     type: DataTypes.STRING,
     allowNull: false
   }
+  log{
+    type: DataTypes.TEXT,
+    allowNull: false
+  }
   
-}, { sequelize, modelName: 'post' })
+}, { sequelize, modelName: 'user_logs' })
 
-module.exports = Post
+module.exports = Logs
