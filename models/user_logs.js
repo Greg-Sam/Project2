@@ -14,7 +14,7 @@ Logs.init({
     allowNull: false
   }
   log{
-    type: DataTypes.TEXT,
+    type: DataTypes.TEXT('long'),
     allowNull: false
   }
   
