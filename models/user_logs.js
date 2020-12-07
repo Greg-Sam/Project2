@@ -13,10 +13,12 @@ Logs.init({
     type: DataTypes.STRING,
     allowNull: false
   }
+  
   log{
     type: DataTypes.TEXT('long'),
     allowNull: false
   }
+  
   
 }, { sequelize, modelName: 'user_logs' })
 
