@@ -15,8 +15,15 @@ User.init({
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    isEmail: true,
+    unique: true
   },
+  password: {
+    type: DataTypes.STRING(64),
+    allowNull: false,
+    is: /^[0-9a-f]{64}$/i   
+  }
   
 }, { sequelize, modelName: 'user' })
 
