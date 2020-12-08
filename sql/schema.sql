@@ -1,4 +1,3 @@
-
 CREATE DATABASE codebook_db;
 
 USE codebook_db;

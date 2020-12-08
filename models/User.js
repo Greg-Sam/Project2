@@ -23,12 +23,11 @@ User.init({
     type: DataTypes.STRING(64),
     allowNull:false,
     unique: true
-  }
+  },
   password: {
     type: DataTypes.STRING(64),
     allowNull: false,
   }
-  
 }, { sequelize, modelName: 'user' })
 
 module.exports = User
