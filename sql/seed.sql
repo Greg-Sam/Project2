@@ -1,7 +1,11 @@
-INSERT INTO users (first_name, last_name, email, password) VALUES ('Elisabeth', 'Windsor', 'ewindsor@email.com', 'password');
-INSERT INTO users (first_name, last_name, email, password) VALUES ('Darth', 'Vader', 'darth@email.com', 'password');
-INSERT INTO users (first_name, last_name, email, password) VALUES ('Luke', 'Skywalker', 'lukee@email.com', 'password');
-INSERT INTO users (first_name, last_name, email, password) VALUES ('Harry', 'Potter', 'harry@email.com', 'password');
+INSERT INTO users (first_name, last_name, email, user_name, password) 
+VALUES ('Elisabeth', 'Windsor', 'ewindsor@email.com', 'Queen', 'password');
+INSERT INTO users (first_name, last_name, email, user_name, password) 
+VALUES ('Darth', 'Vader', 'darth@email.com', 'DarkSide','password');
+INSERT INTO users (first_name, last_name, email, user_name, password) 
+VALUES ('Luke', 'Skywalker', 'lukee@email.com', 'Light Side', 'password');
+INSERT INTO users (first_name, last_name, email, user_name, password) 
+VALUES ('Harry', 'Potter', 'harry@email.com', 'ChosenOne', 'password');
 
 INSERT INTO posts (post, user_id) VALUES ('They are not ROYAL, they just happen to have me as their aunt! ', 1);
 INSERT INTO posts (post, user_id) VALUES ('I am your father, Luke!', 2);

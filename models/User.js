@@ -19,6 +19,11 @@ User.init({
     isEmail: true,
     unique: true
   },
+  user_name:{
+    type: DataTypes.STRING(64),
+    allowNull:false,
+    unique: true
+  }
   password: {
     type: DataTypes.STRING(64),
     allowNull: false,
