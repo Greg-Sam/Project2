@@ -1,17 +1,20 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-class Posts extends Model { }
+class Post extends Model { }
 
-Posts.init({
- 
-  
-  log{
+Post.init({
+   
+  post{
     type: DataTypes.TEXT('long'),
+    allowNull: false
+  }
+  user_id{
+    type: DataTypes.INTEGER,
     allowNull: false
   }
   
   
 }, { sequelize, modelName: 'user_logs' })
 
-module.exports = Posts
+module.exports = Post
