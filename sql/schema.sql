@@ -1,4 +1,5 @@
-REATE DATABASE codebook_db;
+
+CREATE DATABASE codebook_db;
 
 USE codebook_db;
 
@@ -13,8 +14,8 @@ password VARCHAR(64) NOT NULL
 USE codebook_db;
 
 CREATE TABLE posts (
-post_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-posts LONGTEXT,
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+post LONGTEXT,
 user_id INT NOT NULL, 
 FOREIGN KEY(user_id) REFERENCES users(id)
 );
