@@ -5,20 +5,18 @@ class Post extends Model { }
 
 Post.init({
    
-  post{
+  post: {
     type: DataTypes.TEXT('long'),
     allowNull: false
-  }
-  name{
+  },
+  name: {
     type: STRING,
     allowNull: false
-  }
-  user_id{
+  },
+  user_id: {
     type: DataTypes.INTEGER,
     allowNull: false
   }
-  
-  
 }, { sequelize, modelName: 'user_logs' })
 
 module.exports = Post
