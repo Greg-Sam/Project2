@@ -1,7 +1,7 @@
 const User = require('./users.js')
-const Logs = require('./user_logs.js')
+const Posts = require('./posts.js')
 
-users.hasMany(user_log)
-Logs.belongsTo(users)
+Users.hasMany(Posts)
+Posts.belongsTo(Users)
 
-module.exports = { User, Logs }
+module.exports = { User, Posts }
