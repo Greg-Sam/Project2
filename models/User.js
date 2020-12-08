@@ -22,7 +22,6 @@ User.init({
   password: {
     type: DataTypes.STRING(64),
     allowNull: false,
-    
   }
   
 }, { sequelize, modelName: 'user' })
