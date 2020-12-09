@@ -10,7 +10,6 @@ const addUser = () => {
   let inputLastName = document.getElementById('inputLastName').value
   let inputPassword = document.getElementById('inputPassword').value
   let confirmedPassword = document.getElementById('inputConfirmPassword').value
-  console.log(inputFirstName, inputLastName, inputUsername, inputEmail, inputPassword, confirmedPassword)
 
   if (checkPasswordMatch()) {
     axios.post('/api/users', {
@@ -27,7 +26,7 @@ const addUser = () => {
   }
 }
 
-const checkPasswordMatch = (inputPassword, confirmedPassword) => {
+function checkPasswordMatch(inputPassword, confirmedPassword) {
   let isMatch = inputPassword === confirmedPassword ? true : false
   return isMatch
 }
