@@ -15,8 +15,18 @@ USE codebook_db;
 
 CREATE TABLE posts (
 id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-post LONGTEXT,
+post LONGTEXT NOT NULL,
 user_id INT NOT NULL, 
 FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
+USE codebook_db;
+
+CREATE TABLE comments (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+comment LONGTEXT NOT NULL,
+user_id INT NOT NULL,
+post_id INT NOT NULL,
+FOREIGN KEY(user_id) REFERENCES users(id),
+FOREIGN KEY(post_id) REFERENCES posts(id)
+);

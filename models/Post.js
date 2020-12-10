@@ -17,6 +17,6 @@ Post.init({
     type: DataTypes.INTEGER,
     allowNull: false
   }
-}, { sequelize, modelName: 'user_logs' })
+}, { sequelize, modelName: 'post' })
 
 module.exports = Post
