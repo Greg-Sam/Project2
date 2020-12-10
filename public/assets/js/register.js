@@ -19,10 +19,10 @@ const addUser = () => {
       user_name: inputUsername,
       password: inputPassword
     })
-      .then(({ data }) => {
+    .then(({ data }) => {
         console.log(data)
-      })
-      .catch(err => console.error(err))
+    })
+    .catch(err => console.error(err))
   }
 }
 
