@@ -11,4 +11,12 @@ app.use(require('./routes'))
 
 require('./db').sync()
   .then(() => app.listen(8080))
+<<<<<<< HEAD
   .catch(err => console.log(err))
+=======
+<<<<<<< HEAD
+  .catch(err => console.log(err))
+=======
+  .catch(err => console.log(err))
+>>>>>>> 0e92f9a10c0482dd901d0edbf524e2c8d0412dd6
+>>>>>>> 8e459e878df864f0ca16316525d14ef591edadd7
