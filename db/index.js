@@ -1,11 +1,5 @@
 const Sequelize = require('sequelize')
 
-const sequelize = new Sequelize('pets_db', 'root', '1234', {
-  host: 'localhost',
-  dialect: 'mysql',
-  define: {
-    timestamps: false
-  }
-});
+const sequelize = new Sequelize(process.env.JAWSDB_URL || 'mysql://root:MySQL1!@localhost/codebook_db')
 
 module.exports = sequelize
