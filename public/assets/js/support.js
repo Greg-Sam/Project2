@@ -41,7 +41,7 @@ function addNewComment(event){
       var newComment = {
         "name": document.getElementById('new_comment_name').value,
         "email": document.getElementById('new_comment_email').value,
-        "comment": document.getElementById('new_comment_text').value
+        "comment": document.getElementById('new_request_text').value
       }
 
       var xhr = new XMLHttpRequest();
