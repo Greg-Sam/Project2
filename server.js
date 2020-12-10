@@ -10,5 +10,5 @@ app.use(express.json())
 app.use(require('./routes'))
 
 require('./db').sync()
-  .then(() => app.listen(3000))
+  .then(() => app.listen(8080))
   .catch(err => console.log(err))
