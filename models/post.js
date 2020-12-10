@@ -4,7 +4,7 @@ const sequelize = require('../db')
 class Post extends Model { }
 
 Post.init({
-
+   
   post: {
     type: DataTypes.TEXT('long'),
     allowNull: false
