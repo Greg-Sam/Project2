@@ -12,7 +12,7 @@ const loginUser = () => {
       let users = res.data
       console.log(users)
       users.forEach(user => {
-        if(inputEmail === user.email && inputPassword === user.password) {
+        if (inputEmail === user.email && inputPassword === user.password) {
           let userId = user.id
           localStorage.setItem('codebookUID', `${userId}`)
           window.open("../index.html", "_self")
