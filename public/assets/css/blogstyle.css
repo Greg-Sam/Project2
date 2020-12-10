@@ -1,5 +1,5 @@
 body {
-  background-color: #eee
+  background-color: rgb(53, 53, 61);
 }
 
 .time {
@@ -20,8 +20,4 @@ body {
 
 #main {
   margin-top: 75px;
-}
-
-#body {
-  background-color: grey;
 }
