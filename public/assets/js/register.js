@@ -10,6 +10,7 @@ const addUser = () => {
   let inputLastName = document.getElementById('inputLastName').value
   let inputPassword = document.getElementById('inputPassword').value
   let confirmedPassword = document.getElementById('inputConfirmPassword').value
+  let inputPfp = document.getElementById('inputPfp').value
 
   if (checkPasswordMatch()) {
     axios.post('/api/users', {
@@ -17,7 +18,8 @@ const addUser = () => {
       last_name: inputLastName,
       email: inputEmail,
       user_name: inputUsername,
-      password: inputPassword
+      password: inputPassword,
+      pfp: inputPfp
     })
     .then(({ data }) => {
         console.log(data)
