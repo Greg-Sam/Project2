@@ -1,4 +1,3 @@
-
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
@@ -27,7 +26,11 @@ User.init({
   },
   password: {
     type: DataTypes.STRING(64),
-    allowNull: false,
+    allowNull: false
+  },
+  pfp: {
+    type: DataTypes.STRING(128),
+    allowNull: true
   }
 }, { sequelize, modelName: 'user' })
 
