@@ -34,7 +34,7 @@ channel.bind('new_comment',newCommentReceived);
       commentsList.appendChild(newCommentNode);
     }
 
-var commentForm = document.getElementById('comment-form');
+var commentForm = document.getElementById('submit');
 
 function addNewComment(event){
       event.preventDefault();
@@ -58,7 +58,7 @@ function addNewComment(event){
 }
 
 // Adding to Comment Form Submit Event
-commentForm.addEventListener("submit", addNewComment);
+commentForm.addEventListener("click", addNewComment);
 
 })();
 
