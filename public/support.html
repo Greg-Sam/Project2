@@ -53,28 +53,30 @@
     <h1 class="h3 mb-3 font-weight-normal">Support Chat</h1>
     <label for="inputName" class="sr-only">Name</label>
     <input type="text" id="new_comment_name" class="form-control" placeholder="Enter your name" required autofocus>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="new_comment_email" class="form-control" placeholder="Enter your email address" required autofocus>
-    <label for="newRequest" class="sr-only">Support request</label>
-    <textarea id="new_request_text" class="form-control" placeholder="What can we help you with?" required autofocus></textarea>
+    <label for="inputEmail" class="sr-only">Email address (optional)</label>
+    <input type="email" id="new_comment_email" class="form-control" placeholder="Enter your email address" required
+      autofocus>
+    <label type="message" for="newRequest" class="sr-only">Support request</label>
+    <textarea id="new_request_text" class="form-control" placeholder="What can we help you with?" required
+      autofocus></textarea>
 
     <button class="btn btn-lg btn-primary btn-warning" id="submit" type="submit">Submit</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2020-2020</p>
-  </form>
-   <div class="comments-list" id="comments-list">
-          <script id="comment-template" type="text/x-template">
+    <hr>
+    
+    <div class="comments-list" id="comments-list">
+      <script id="comment-template" type="text/x-template">
             <div class="comment-info">
                 <div class="row">
-                      <div class="name">{{name}}</div>
-                      <div class="email">{{email}}</div>
+                      <div class="name">Name: {{name}}</div>
                  </div>
                  <div class="row">
-                       <div class="text">{{comment}}</div>
+                       <div class="text">Message: {{comment}}</div>
                  </div>
              </div>
           </script>
-        </div>
-
+    </div>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2020</p>
+  </form>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -84,7 +86,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="https://js.pusher.com/3.2/pusher.min.js"></script>
   <script src="assets/js/support.js"></script>
-  
+
 </body>
 
 </html>

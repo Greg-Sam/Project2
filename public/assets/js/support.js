@@ -26,7 +26,6 @@ channel.bind('new_comment',newCommentReceived);
     // We will take the Comment Template, replace placeholders & append to commentsList
     function newCommentReceived(data){
       var newCommentHtml = commentTemplate.innerHTML.replace('{{name}}',data.name);
-      newCommentHtml = newCommentHtml.replace('{{email}}',data.email);
       newCommentHtml = newCommentHtml.replace('{{comment}}',data.comment);
       var newCommentNode = document.createElement('div');
       newCommentNode.classList.add('comment');
@@ -44,6 +43,10 @@ function addNewComment(event){
         "comment": document.getElementById('new_request_text').value
       }
 
+  document.getElementById('new_comment_name').value = ''
+  document.getElementById('new_comment_email').value = ''
+  document.getElementById('new_request_text').value = ''
+
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "/comment", true);
       xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -52,13 +55,17 @@ function addNewComment(event){
 
         // On Success of creating a new Comment
         console.log("Success: " + xhr.responseText);
-        commentForm.reset();
       };
       xhr.send(JSON.stringify(newComment));
 }
+ 
+
 
 // Adding to Comment Form Submit Event
 commentForm.addEventListener("click", addNewComment);
+
+
+
 
 })();
 

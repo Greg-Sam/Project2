@@ -42,7 +42,19 @@ body {
 }
 
 .form-support input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-support input[type="message"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-support input[type="text"] {
+  margin-bottom: 10px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -51,6 +63,34 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-support .comments-list .comment-info {
+  bg-light;
+  text-primary
+}
+
+.form-control {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.name {
+  text-align: left;
+  color: black;
+  background-color: #f5f5f5;
+}
+
+.text {
+  text-align: left;
+  color: black;
+  background-color: #f5f5f5;
+  margin-left;: 5px
+}
+
+.row {
+  margin-left: 5px;
+  margin-right: 5px
 }
 
 #submit {
