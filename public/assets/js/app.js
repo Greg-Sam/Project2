@@ -12,7 +12,7 @@ axios.get('/api/posts')
             <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
                 src="./assets/images/sample photos/IMG_0872.jpeg" width="45">
-                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Joseph Wong</span><span
+                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold"></span><span
                   class="text-black-50 time">40 minutes ago</span></div>
                 </div>
                 <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
@@ -51,8 +51,19 @@ axios.get('/api/posts')
   .catch(err => console.error(err))
 
 function getNameFromId(postUID) {
-  axios.get('/api/posts')
-    .then(postRes => {
-      
+  let name = ''
+  axios.get('/api/users')
+    .then(({ data }) => {
+      console.table(data)
+      for (let i = 0; i < data.length; i++) {
+        if (postUID === data[i].id) {
+          name += `${data[i].first_name} ` + `${data[i].last_name}`
+          console.log(name)
+        }
+      }
     })
+    .catch(err => { console.error(err) })
+    return name
 }
+
+getNameFromId(5)
