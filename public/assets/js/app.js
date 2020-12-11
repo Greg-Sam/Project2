@@ -17,6 +17,8 @@ axios.get('/api/users')
       usernameArr.push(username)
     }
 
+    document.getElementById('postingAs').textContent = `(Posting as ${nameArr[userId]})`
+
 //both GET requests are under the same asynchronous request
 
 axios.get('/api/posts')
@@ -74,7 +76,7 @@ console.log(nameArr)
 
 document.getElementById('postBtn').addEventListener('click', e => {
   axios.post('/api/posts', {
-    post: 'This is a test post from ky',
+    post: document.getElementById('postInput').value,
     user_id: userId,
   })
   .then(res => {
