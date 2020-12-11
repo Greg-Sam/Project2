@@ -1,6 +1,18 @@
 let userId = localStorage.getItem('codebookUID')
 console.log(userId)
 
+let nameArr = ['null']
+
+axios.get('/api/users')
+  .then(({ data }) => {
+    console.table(data)
+    for (let i = 0; i < data.length; i++) {
+      let name = `${data[i].first_name} ` + `${data[i].last_name}`
+      nameArr.push(name)
+    }
+  })
+  .catch(err => { console.error(err) })
+
 axios.get('/api/posts')
   .then(({ data }) => {
     console.table(data)
@@ -12,7 +24,7 @@ axios.get('/api/posts')
             <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
                 src="./assets/images/sample photos/IMG_0872.jpeg" width="45">
-                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold"></span><span
+                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.id]}</span><span
                   class="text-black-50 time">40 minutes ago</span></div>
                 </div>
                 <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
@@ -50,20 +62,4 @@ axios.get('/api/posts')
   })
   .catch(err => console.error(err))
 
-function getNameFromId(postUID) {
-  let name = ''
-  axios.get('/api/users')
-    .then(({ data }) => {
-      console.table(data)
-      for (let i = 0; i < data.length; i++) {
-        if (postUID === data[i].id) {
-          name += `${data[i].first_name} ` + `${data[i].last_name}`
-          console.log(name)
-        }
-      }
-    })
-    .catch(err => { console.error(err) })
-    return name
-}
-
-getNameFromId(5)
+  console.log(nameArr)
