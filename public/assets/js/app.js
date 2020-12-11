@@ -2,13 +2,16 @@ let userId = localStorage.getItem('codebookUID')
 console.log(userId)
 
 let nameArr = ['null']
+let pfpArr = ['null']
 
 axios.get('/api/users')
   .then(({ data }) => {
     console.table(data)
     for (let i = 0; i < data.length; i++) {
       let name = `${data[i].first_name} ` + `${data[i].last_name}`
+      let pfp = `${data[i].pfp}`
       nameArr.push(name)
+      pfpArr.push(pfp)
     }
 
 //both GET requests are under the same asynchronous request
@@ -23,7 +26,7 @@ axios.get('/api/posts')
           <div>
             <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
-                src="./assets/images/sample photos/IMG_0872.jpeg" width="45">
+                src="${pfpArr[post.user_id]}" width="45">
                 <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.user_id]}</span><span
                   class="text-black-50 time">40 minutes ago</span></div>
                 </div>
@@ -70,10 +73,11 @@ document.getElementById('postBtn').addEventListener('click', e => {
   axios.post('/api/posts', {
     post: 'This is a test post from ky',
     user_id: userId,
-    userId: 'a'
   })
   .then(res => {
     window.location.reload()
   })
   .catch(err => console.error(err))
 })
+
+console.log(pfpArr)
