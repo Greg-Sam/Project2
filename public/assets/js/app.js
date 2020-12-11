@@ -3,6 +3,7 @@ console.log(userId)
 
 let nameArr = ['null']
 let pfpArr = ['null']
+let usernameArr = ['null']
 
 axios.get('/api/users')
   .then(({ data }) => {
@@ -10,8 +11,10 @@ axios.get('/api/users')
     for (let i = 0; i < data.length; i++) {
       let name = `${data[i].first_name} ` + `${data[i].last_name}`
       let pfp = `${data[i].pfp}`
+      let username = `${data[i].user_name}`
       nameArr.push(name)
       pfpArr.push(pfp)
+      usernameArr.push(username)
     }
 
 //both GET requests are under the same asynchronous request
@@ -28,7 +31,7 @@ axios.get('/api/posts')
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
                 src="${pfpArr[post.user_id]}" width="45">
                 <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.user_id]}</span><span
-                  class="text-black-50 time">40 minutes ago</span></div>
+                  class="text-black-50 time">${usernameArr[post.user_id]}</span></div>
                 </div>
                 <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
               </div>
