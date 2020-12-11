@@ -10,8 +10,8 @@ axios.get('/api/users')
       let name = `${data[i].first_name} ` + `${data[i].last_name}`
       nameArr.push(name)
     }
-  })
-  .catch(err => { console.error(err) })
+
+//both GET requests are under the same asynchronous request
 
 axios.get('/api/posts')
   .then(({ data }) => {
@@ -24,7 +24,7 @@ axios.get('/api/posts')
             <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
                 src="./assets/images/sample photos/IMG_0872.jpeg" width="45">
-                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.id]}</span><span
+                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.user_id]}</span><span
                   class="text-black-50 time">40 minutes ago</span></div>
                 </div>
                 <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
@@ -60,6 +60,20 @@ axios.get('/api/posts')
       document.getElementById('feed').append(postElem)
     })
   })
-  .catch(err => console.error(err))
+  .catch(err => console.error(err)) })
+  .catch(err => { console.error(err) })
+  //asynchronicity fix
 
-  console.log(nameArr)
+console.log(nameArr)
+
+document.getElementById('postBtn').addEventListener('click', e => {
+  axios.post('/api/posts', {
+    post: 'This is a test post from ky',
+    user_id: userId,
+    userId: 'a'
+  })
+  .then(res => {
+    window.location.reload()
+  })
+  .catch(err => console.error(err))
+})

@@ -26,7 +26,11 @@ User.init({
   },
   password: {
     type: DataTypes.STRING(64),
-    allowNull: false,
+    allowNull: false
+  },
+  pfp: {
+    type: DataTypes.STRING(128),
+    allowNull: true
   }
 }, { sequelize, modelName: 'user' })
 
