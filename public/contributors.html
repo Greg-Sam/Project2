@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Contributors</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -60,7 +62,7 @@
   }
   .btn{
     
-    background-color: yellow;
+   margin: 10px;
   }
   #github{
     margin-left: 5px;
@@ -74,7 +76,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">CodeBook</a>
+      <img class="navbar-brand" src="assets/images/logo.png" height="40px" href="#"></img>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -82,18 +84,23 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">CodeBook
+              <a class="nav-link" href="index.html">Home
                 <span class="sr-only"></span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">Feed</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="contributors.html">Contributors</a>
-            </li> -->
+            
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logoutBtn" href="./login.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -108,9 +115,7 @@
       <div class="row justify-content-center mb-4">
         <div class="col-md-7 text-center">
           <h3 class="mb-3 text-white">The CodeBook Team</h3>
-          <!-- <h6 class="subtitle text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus et error officia!
-            Perspiciatis molestiae ipsam architecto, reiciendis totam maxime, deserunt molestias similique itaque
-            explicabo blanditiis facilis! Culpa dolor blanditiis corrupti.</h6> -->
+         
         </div>
       </div>
       <div class="row">
@@ -131,20 +136,15 @@
                
                 <ul class="list-inline">
                   
-                  <li button type="button" class="btn btn-primary btn-sm"><a href="#" >
+                  <li button type="button" class="btn btn-primary btn-sm btn-warning"><a href="#" >
                     <i class="fab fa-linkedin-in"></i><a href="https://github.com/amee05"> Linkedin</a></li>
-                    <br>
-                  <li button type="button" id="github" class="btn btn-primary btn-sm"><a href="#">
+                  
+                  <li button type="button" id="github" class="btn btn-primary btn-sm btn-warning"><a href="#">
                       <i class="fab fa-github"></i><a href="https://amee05.github.io/Responsive-Portfolio/">   Github</a></li>
-                  <!-- <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"> -->
-                    <i></i>
+                   <i></i>
                   </a></li>
                 </ul>
-                <p class="text-white">"JavaScript, node.js, SQL developer. If I am not coding then I am reading."
+                <p class="text-white">"JavaScript, Node.js, SQL developer. Can speak three languages and has been to ten countries..Loking forward to visit many more. If I am not coding then I am reading."
                 </p>
               </div>
             </div>
@@ -166,19 +166,15 @@
                 <br>
                 <ul class="list-inline">
                   <!-- <li lass="btn btn-primary">Take a look</a></li> class="text-decoration-none d-block px-1" -->
-                  <li class="btn btn-primary btn btn-sm"><a href="#">
+                  <li class="btn btn-primary btn btn-sm btn-warning"><a href="#">
                       <i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/greg-samuelson/"> Linkedin</a></li>
-                  <li class="btn btn-primary btn-sm"><a href="#">
+                  <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                       <i class="fab fa-github"></i><a href="https://github.com/Greg-Sam"> Github</a></li>
-                  <!-- <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"> -->
+                  
                       <i></i>
                     </a></li>
                 </ul>
-                <!-- <h6 class="subtitle mb-3 text-white">Property Specialist</h6> -->
+                
                 <p class="text-white">"Greg is an aspiring full-stack developer with experience in education, project management and international development
                 work. He loves coming up with new ideas and then figuring out how to make them a reality."
                 </p>
@@ -203,16 +199,11 @@
                 <br>
                 <ul class="list-inline">
                   <!-- <li lass="btn btn-primary">Take a look</a></li> class="text-decoration-none d-block px-1" -->
-                  <li class="btn btn-primary btn-sm"><a href="#">
+                  <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                       <i class="fab fa-linkedin-in"></i><a href="https://github.com/amee05"> Linkedin</a></li>
-                  <li class="btn btn-primary btn-sm"><a href="#">
+                  <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                       <i class="fab fa-github"></i><a href="https://github.com/ky-lore"> Github</a></li>
-                  <!-- <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"> -->
-                      <i></i>
+                     <i></i>
                     </a></li>
                 </ul>
                 <!-- <h6 class="subtitle mb-3 text-white">Property Specialist</h6> -->
@@ -240,19 +231,15 @@
                 <br>
                 <ul class="list-inline">
                   <!-- <li lass="btn btn-primary">Take a look</a></li> class="text-decoration-none d-block px-1" -->
-                  <li class="btn btn-primary btn-sm"><a href="#">
+                  <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                       <i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/joseph-wong-ludwicak/"> Linkedin</a></li>
-                  <li class="btn btn-primary btn-sm"><a href="#">
+                  <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                       <i class="fab fa-github"></i><a href="https://github.com/Josclud"> Github</a></li>
-                  <!-- <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"> -->
+                
                       <i></i>
                     </a></li>
                 </ul>
-                <!-- <h6 class="subtitle mb-3 text-white">Property Specialist</h6> -->
+              
                 <p class="text-white">"Hi, Im Joseph and I am currently working towards a career as a full-stack web developer. Checkout my Linkedin and Github
                 to learn more about me and projects."
                 </p>
@@ -277,20 +264,16 @@
               <br>
 
               <ul>
-                <li class="btn btn-primary btn-sm"><a href="#">
+                <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                     <i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/wettim-linton-54b4421a6/"> Linkedin</a>
                 </li>
-                <li class="btn btn-primary btn-sm"><a href="#">
+                <li class="btn btn-primary btn-sm btn-warning"><a href="#">
                     <i class="fab fa-github"></i><a href="https://github.com/wlinton1"> Github</a></li>
-                <!-- <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                      class="icon-social-twitter"></i></a></li>
-                <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                      class="icon-social-instagram"></i></a></li>
-                <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"> -->
+               
                     <i></i>
                   </a></li>
               </ul>
-              <!-- <h6 class="subtitle mb-3 text-white">Property Specialist</h6> -->
+             
               <p class="text-white">"I'm currently enrolled in the UCI Full Stack Coding Bootcamp. I'm looking forward to
                 learning all there is to know about web development in order to create fantastic websites. We are 7 weeks in and
                 I am currently versed in HTML, CSS, JS, node and mysql."
@@ -300,36 +283,7 @@
           </div>
         </div>
           <!-- Row -->
-        <!-- </div>
-        <div class="col-lg-2 mb-4">
-          Row
-          <div class="row">
-            <div class="col-md-12">
-              <img
-                src="https://media.discordapp.net/attachments/783457733164400710/787078521570852884/project22222.jpg?width=350&height=350"
-                alt="wrapkit" class="img-fluid rounded-circle" />
-            </div>
-            <div class="col-md-12 text-center">
-              <div class="pt-2">
-                <h5 class="mt-4 font-weight-medium mb-0 text-white">Wettim Linton</h5>
-               
-                <p class="text-white">"I'm currently enrolled in the UCI Full Stack Coding Bootcamp. I'm looking forward to learning all there is to know about web development in order to create fantastic websites. We are 7 weeks in and I am currently versed in HTML, CSS, JS, node and mysql."
-                </p>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-facebook"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i
-                        class="icon-social-behance"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          Row
-        </div> -->
+       
         <div class="col-lg-1 mb-4"></div>
       </div>
     </div>

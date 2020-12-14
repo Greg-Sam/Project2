@@ -9,3 +9,4 @@ const sequelize = new Sequelize('codebook_db', 'root', '1234', {
 });
 
 module.exports = sequelize
+
