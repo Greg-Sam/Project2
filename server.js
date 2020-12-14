@@ -30,5 +30,5 @@ app.post('/comment', function (req, res) {
 });
 
 require('./db').sync()
-  .then(() => app.listen(8080))
+  .then(() => app.listen(process.env.PORT || 8080))
   .catch(err => console.log(err))
