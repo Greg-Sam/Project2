@@ -29,7 +29,7 @@ User.init({
     allowNull: false
   },
   pfp: {
-    type: DataTypes.STRING(128),
+    type: DataTypes.STRING(512),
     allowNull: true
   }
 }, { sequelize, modelName: 'user' })
