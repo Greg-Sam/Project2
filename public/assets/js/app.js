@@ -7,7 +7,7 @@ let usernameArr = ['null']
 
 axios.get('/api/users')
   .then(({ data }) => {
-    console.table(data)
+    
     for (let i = 0; i < data.length; i++) {
       let name = `${data[i].first_name} ` + `${data[i].last_name}`
       let pfp = `${data[i].pfp}`
@@ -27,7 +27,7 @@ axios.get('/api/users')
 
 axios.get('/api/posts')
   .then(({ data }) => {
-    console.table(data)
+   
     data.slice().reverse().forEach(post => {
       let postElem = document.createElement('div')
       postElem.innerHTML = (`
@@ -84,11 +84,11 @@ axios.get('/api/posts')
 
     axios.get('/api/comments')
       .then(({ data }) => {
-        console.log(data)
+       
         let posts = document.getElementsByClassName('commentsWrapper')
         for (let b = 0; b < data.length; b++) {
           for (let i = 0; i < posts.length; i++) {
-            //console.log(parseInt(posts[i].parentNode.children.item(1).id), data[b].post_id)
+          
             if (parseInt(posts[i].parentNode.children.item(1).id) === data[b].post_id) {
               let commentElem = document.createElement('p')
               commentElem.innerHTML = `
@@ -106,7 +106,7 @@ axios.get('/api/posts')
   .catch(err => { console.error(err) })
   //asynchronicity fix
 
-console.log(nameArr)
+
 
 document.getElementById('postBtn').addEventListener('click', e => {
   axios.post('/api/posts', {
@@ -146,6 +146,6 @@ const readyPostComment = () => {
 }
 
 function getPostId(id) {
-  console.log(id)
+
   return id
 }
