@@ -22,7 +22,7 @@ const addUser = () => {
       pfp: inputPfp
     })
     .then(({ data }) => {
-        console.log(data)
+      window.open("../login.html", "_self")
     })
     .catch(err => console.error(err))
   }

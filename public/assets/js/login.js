@@ -15,7 +15,7 @@ const loginUser = () => {
         if (inputEmail === user.email && inputPassword === user.password) {
           let userId = user.id
           localStorage.setItem('codebookUID', `${userId}`)
-          window.open("../index.html", "_self")
+          window.open("../blog.html", "_self")
         }
       })
     })

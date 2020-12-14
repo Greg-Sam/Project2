@@ -2,6 +2,11 @@ body {
   background-color: rgb(53, 53, 61);
 }
 
-.btn{
+.btn {
   margin-left: 20px;
+}
+
+a:link {
+  color: gold;
+  text-decoration: none;
 }
