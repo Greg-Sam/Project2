@@ -93,7 +93,7 @@ axios.get('/api/posts')
               let commentElem = document.createElement('p')
               commentElem.innerHTML = `
                 <img class="rounded-circle"
-                src="${pfpArr[data[b].user_id]}" width="30">
+                src="${pfpArr[data[b].user_id]}" width="30" height="30">
                 <b>${nameArr[data[b].user_id]}</b> ${data[b].comment}
               `
               posts[i].append(commentElem)
