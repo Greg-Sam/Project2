@@ -9,7 +9,7 @@ last_name VARCHAR(100) NOT NULL,
 email VARCHAR(100) NOT NULL UNIQUE,
 user_name VARCHAR(100) NOT NULL UNIQUE,
 password VARCHAR(64) NOT NULL,
-pfp VARCHAR(128)
+pfp VARCHAR(512)
 );
 
 USE codebook_db;
