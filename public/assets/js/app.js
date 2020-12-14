@@ -35,7 +35,7 @@ axios.get('/api/posts')
           <div>
             <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
-                src="${pfpArr[post.user_id]}" width="45">
+                src="${pfpArr[post.user_id]}" width="45" height="45">
                 <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.user_id]}</span><span
                   class="text-black-50 time">${usernameArr[post.user_id]}</span></div>
                 </div>
@@ -46,9 +46,7 @@ axios.get('/api/posts')
             <hr>
             <div class="p-2 px-3 commentsWrapper" id="commentsWrapper">
 
-              
-
-            <br></div>
+            </div>
             <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
               class="fa fa-comments-o"></i><i class="fa fa-share"></i>
               <button type="button" id="startCommentBtn" class="btn btn-secondary startCommentBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -94,7 +92,9 @@ axios.get('/api/posts')
             if (parseInt(posts[i].parentNode.children.item(1).id) === data[b].post_id) {
               let commentElem = document.createElement('p')
               commentElem.innerHTML = `
-                ${data[b].comment}
+                <img class="rounded-circle"
+                src="${pfpArr[data[b].user_id]}" width="30">
+                <b>${nameArr[data[b].user_id]}</b> ${data[b].comment}
               `
               posts[i].append(commentElem)
             }
