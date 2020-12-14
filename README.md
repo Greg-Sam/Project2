@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   # <#CodeBook/>
   A simple app to help you keep track of all your coding accomplishments. CodeBook allows you to compete and compare your progress with your classmates and coworkers. Help celebrate small or large victories to encourage your friends on their coding journey!
+
+  Join the CodeBook family by following this link and creating an account https://radiant-headland-26253.herokuapp.com/index.html 
   ***
   ## Table of Contents
   [Installation instructions](#instalation-instructions)  
@@ -23,8 +25,8 @@
   Wettim Linton https://github.com/wlinton1  
   Greg Samuelson https://github.com/Greg-Sam  
   ## Technology used
-  Node, Express, MySQL, Sequelize, Heroku, JAWS_DB, JavaScript, HTML and CSS.  
+  Node, Express, MySQL, Sequelize, Pusher, Heroku, JAWS_DB, JavaScript, HTML and CSS.  
   ## Testing procedure
-  I never know what to put here.  Any ideas?  
+  Routes tested using jest.  
   ## Questions  
   If you have any questions you can reach us at josclud@gmail.com, amee05@yahoo.com, kclore3131@gmail.com, josclud@gmail.com, wettimlinton123@gmail.com.
