@@ -4,7 +4,7 @@
   "description": "push pull practice",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+  
   },
   "repository": {
     "type": "git",
