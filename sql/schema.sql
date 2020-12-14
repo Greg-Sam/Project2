@@ -28,7 +28,7 @@ CREATE TABLE comments (
 id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 comment LONGTEXT NOT NULL,
 user_id INT NOT NULL,
-userId INT NULL
+userId INT NULL,
 post_id INT NOT NULL,
 FOREIGN KEY(user_id) REFERENCES users(id),
 FOREIGN KEY(post_id) REFERENCES posts(id)
