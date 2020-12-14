@@ -36,7 +36,7 @@ axios.get('/api/posts')
             <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
               <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle"
                 src="${pfpArr[post.user_id]}" width="45" height="45">
-                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">${nameArr[post.user_id]}</span><span
+                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold"><b>${nameArr[post.user_id]}</b></span><span
                   class="text-black-50 time">${usernameArr[post.user_id]}</span></div>
                 </div>
                 <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
